@@ -1,6 +1,6 @@
 /* Mobile-first responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1048px) {
     .site-header {
         padding: 0 var(--space-4);
     }
@@ -16,7 +16,9 @@
     .prefs-mobile {
         display: block;
     }
+}
 
+@media (max-width: 768px) {
     main {
         padding-inline: var(--space-4);
     }
@@ -38,7 +40,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1049px) {
     .prefs-mobile {
         display: none !important;
     }

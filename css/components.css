@@ -18,7 +18,28 @@
         transform var(--transition-fast),
         background-color var(--transition-base),
         color var(--transition-base),
-        border-color var(--transition-base);
+        border-color var(--transition-base),
+        box-shadow var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn:active::after {
+    width: 200%;
+    height: 200%;
 }
 
 .btn:hover {
@@ -65,10 +86,18 @@
 
 .card {
     background: var(--surface);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: var(--space-6);
     box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .tag-list {
@@ -86,6 +115,14 @@
     color: var(--tag-text);
     font-size: var(--font-xs);
     font-weight: var(--weight-medium);
+    transition: transform var(--transition-fast), background-color var(--transition-base);
+    cursor: default;
+}
+
+.tag-list li:hover {
+    transform: scale(1.05);
+    background: var(--accent);
+    color: var(--accent-contrast);
 }
 
 .timeline {
@@ -97,6 +134,12 @@
 .timeline-item {
     padding-left: var(--space-4);
     border-left: 3px solid var(--accent);
+    transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.timeline-item:hover {
+    transform: translateX(4px);
+    border-left-color: var(--accent-strong);
 }
 
 .timeline-title {
@@ -120,6 +163,17 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--space-4);
     margin-bottom: var(--space-5);
+    container-type: inline-size;
+}
+
+@container (max-width: 300px) {
+    .feature-card h3 {
+        font-size: var(--font-md);
+    }
+    
+    .feature-card p {
+        font-size: var(--font-xs);
+    }
 }
 
 .feature-card {
@@ -127,6 +181,13 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: var(--space-5);
+    transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
 }
 
 .feature-card h3 {
