@@ -1,0 +1,45 @@
+/* Mobile-first responsive */
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0 var(--space-4);
+    }
+
+    .brand-text small {
+        display: none;
+    }
+
+    .prefs-desktop {
+        display: none;
+    }
+
+    .prefs-mobile {
+        display: block;
+    }
+
+    main {
+        padding-inline: var(--space-4);
+    }
+
+    .hero {
+        padding: var(--space-6) var(--space-5);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .card {
+        padding: var(--space-5);
+    }
+}
+
+@media (min-width: 769px) {
+    .prefs-mobile {
+        display: none !important;
+    }
+}

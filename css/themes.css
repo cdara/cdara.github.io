@@ -1,0 +1,145 @@
+/* Solid theme palettes — no gradients, no animation */
+
+html {
+    color-scheme: dark light;
+}
+
+/* Midnight */
+html[data-theme="midnight"][data-mode="dark"] {
+    color-scheme: dark;
+    --bg: #0b1118;
+    --surface: #141c27;
+    --surface-alt: #1a2433;
+    --hero-bg: #162033;
+    --border: #2a3544;
+    --heading: #f8fafc;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent: #60a5fa;
+    --accent-strong: #93c5fd;
+    --accent-contrast: #0b1118;
+    --tag-bg: #1e293b;
+    --tag-text: #cbd5e1;
+}
+
+html[data-theme="midnight"][data-mode="light"] {
+    color-scheme: light;
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --surface-alt: #e2e8f0;
+    --hero-bg: #dbeafe;
+    --border: #cbd5e1;
+    --heading: #0f172a;
+    --text: #334155;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+    --accent-contrast: #ffffff;
+    --tag-bg: #eff6ff;
+    --tag-text: #1e40af;
+}
+
+/* Spring */
+html[data-theme="spring"][data-mode="dark"] {
+    color-scheme: dark;
+    --bg: #0d1510;
+    --surface: #152019;
+    --surface-alt: #1c2a22;
+    --hero-bg: #1a3328;
+    --border: #2d4035;
+    --heading: #ecfdf5;
+    --text: #d1fae5;
+    --text-muted: #86efac;
+    --accent: #34d399;
+    --accent-strong: #6ee7b7;
+    --accent-contrast: #052e16;
+    --tag-bg: #14532d;
+    --tag-text: #bbf7d0;
+}
+
+html[data-theme="spring"][data-mode="light"] {
+    color-scheme: light;
+    --bg: #f0fdf4;
+    --surface: #ffffff;
+    --surface-alt: #dcfce7;
+    --hero-bg: #bbf7d0;
+    --border: #bbf7d0;
+    --heading: #14532d;
+    --text: #166534;
+    --text-muted: #15803d;
+    --accent: #059669;
+    --accent-strong: #047857;
+    --accent-contrast: #ffffff;
+    --tag-bg: #dcfce7;
+    --tag-text: #166534;
+}
+
+/* Summer Lemon */
+html[data-theme="summer"][data-mode="dark"] {
+    color-scheme: dark;
+    --bg: #14120a;
+    --surface: #1f1c12;
+    --surface-alt: #2a2618;
+    --hero-bg: #3d3518;
+    --border: #3f3824;
+    --heading: #fefce8;
+    --text: #fef9c3;
+    --text-muted: #fde047;
+    --accent: #facc15;
+    --accent-strong: #fde047;
+    --accent-contrast: #422006;
+    --tag-bg: #422006;
+    --tag-text: #fef08a;
+}
+
+html[data-theme="summer"][data-mode="light"] {
+    color-scheme: light;
+    --bg: #fefce8;
+    --surface: #ffffff;
+    --surface-alt: #fef9c3;
+    --hero-bg: #fde047;
+    --border: #fde68a;
+    --heading: #713f12;
+    --text: #854d0e;
+    --text-muted: #a16207;
+    --accent: #ca8a04;
+    --accent-strong: #a16207;
+    --accent-contrast: #ffffff;
+    --tag-bg: #fef9c3;
+    --tag-text: #854d0e;
+}
+
+/* Fall Chestnut */
+html[data-theme="fall"][data-mode="dark"] {
+    color-scheme: dark;
+    --bg: #140f0c;
+    --surface: #1f1712;
+    --surface-alt: #2a1f18;
+    --hero-bg: #3d2818;
+    --border: #3f2f24;
+    --heading: #fef3e2;
+    --text: #fed7aa;
+    --text-muted: #fdba74;
+    --accent: #f97316;
+    --accent-strong: #fb923c;
+    --accent-contrast: #431407;
+    --tag-bg: #431407;
+    --tag-text: #fed7aa;
+}
+
+html[data-theme="fall"][data-mode="light"] {
+    color-scheme: light;
+    --bg: #fff7ed;
+    --surface: #ffffff;
+    --surface-alt: #ffedd5;
+    --hero-bg: #fdba74;
+    --border: #fed7aa;
+    --heading: #7c2d12;
+    --text: #9a3412;
+    --text-muted: #c2410c;
+    --accent: #ea580c;
+    --accent-strong: #c2410c;
+    --accent-contrast: #ffffff;
+    --tag-bg: #ffedd5;
+    --tag-text: #9a3412;
+}

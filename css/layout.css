@@ -1,0 +1,101 @@
+/* Page structure */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: 0 var(--space-5);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-width: 0;
+}
+
+.brand-mark {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: var(--accent-contrast);
+    font-size: var(--font-sm);
+    font-weight: var(--weight-bold);
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-text strong {
+    display: block;
+    color: var(--heading);
+    font-size: var(--font-sm);
+    font-weight: var(--weight-semibold);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.brand-text small {
+    display: block;
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero {
+    background: var(--hero-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-7) var(--space-6);
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-size: var(--font-xs);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 16ch;
+    margin-bottom: var(--space-4);
+}
+
+.hero-lead {
+    max-width: 52ch;
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-6);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.section-lead {
+    margin-bottom: var(--space-5);
+    max-width: 60ch;
+}
