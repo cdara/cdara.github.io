@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="midnight" data-mode="dark" data-motion="on">
+<html lang="en" data-theme="midnight" data-mode="light" data-motion="on">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chakravarty Dara — Staff UI Engineer</title>
+    <title>Chakravarty Dara — Staff UI Engineer / Engineering Manager</title>
     <meta name="description" content="Staff / Lead UI Engineer — 12+ years building fintech trading systems, micro-frontends, and enterprise frontend architecture.">
     <meta name="author" content="Chakravarty Dara">
     <meta name="theme-color" content="#0b1118">
@@ -19,6 +19,10 @@
     <meta name="twitter:title" content="Chakravarty Dara — Staff UI Engineer">
     <meta name="twitter:description" content="Fintech trading systems UI, micro-frontends, and enterprise frontend engineering.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -26,42 +30,49 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js?token=a2d745fb5348743d829d4b78969f38bb"></script>
+
 <body>
 
 <header class="site-header">
     <div class="brand">
         <div class="brand-mark" aria-hidden="true">CD</div>
         <div class="brand-text">
-            <strong>Chakravarty Dara</strong>
-            <small>Staff / Lead UI Engineer</small>
+            <strong>Chakravarty Dara <span style="font-size: 65%">M.S.</span></strong>
+            <!-- <small>Staff / Lead UI Engineer • Engineering Manager</small> -->
         </div>
     </div>
 
     <!-- Desktop: inline controls -->
     <nav class="prefs-desktop" aria-label="Site preferences">
         <div class="prefs-group" role="group" aria-label="Color theme">
-            <span class="prefs-group-label">Theme</span>
-            <button class="btn btn-ghost" type="button" data-theme="midnight" aria-pressed="true" title="Midnight">Midnight</button>
-            <button class="btn btn-ghost" type="button" data-theme="spring" aria-pressed="false" title="Spring">Spring</button>
-            <button class="btn btn-ghost" type="button" data-theme="summer" aria-pressed="false" title="Summer Lemon">Summer</button>
-            <button class="btn btn-ghost" type="button" data-theme="fall" aria-pressed="false" title="Fall Chestnut">Fall</button>
+            <button class="btn btn-ghost" type="button" data-theme="midnight" aria-pressed="true" title="Midnight theme" aria-label="Midnight theme">Midnight</button>
+            <button class="btn btn-ghost" type="button" data-theme="spring" aria-pressed="false" title="Spring theme" aria-label="Spring theme">Spring</button>
+            <button class="btn btn-ghost" type="button" data-theme="summer" aria-pressed="false" title="Summer Lemon theme" aria-label="Summer Lemon theme">Summer</button>
+            <button class="btn btn-ghost" type="button" data-theme="fall" aria-pressed="false" title="Fall Chestnut theme" aria-label="Fall Chestnut theme">Fall</button>
         </div>
 
         <div class="prefs-group" role="group" aria-label="Display mode">
-            <button class="btn btn-ghost" type="button" data-mode="dark" aria-pressed="true">Dark</button>
-            <button class="btn btn-ghost" type="button" data-mode="light" aria-pressed="false">Light</button>
+            <button class="btn btn-ghost" type="button" data-mode="dark" aria-pressed="false" aria-label="Switch to dark mode">Dark</button>
+            <button class="btn btn-ghost" type="button" data-mode="light" aria-pressed="true" aria-label="Switch to light mode">Light</button>
         </div>
 
         <div class="prefs-group font-controls" aria-label="Font size">
             <button class="btn btn-ghost" type="button" data-font-decrease aria-label="Decrease font size">A−</button>
+            <!-- <label for="fontSliderDesktop" class="visually-hidden">Font size</label> -->
             <input type="range" id="fontSliderDesktop" min="0.85" max="1.25" step="0.05" value="1" aria-label="Font size">
             <button class="btn btn-ghost" type="button" data-font-increase aria-label="Increase font size">A+</button>
         </div>
+        <!-- Need to fix -->
+        <!-- <div class="prefs-group" role="group" aria-label="Font style">
+            <button class="btn btn-ghost" type="button" data-font-style="formal" aria-pressed="true" aria-label="Formal font style">Formal</button>
+            <button class="btn btn-ghost" type="button" data-font-style="poet" aria-pressed="false" aria-label="Poet font style">Poet</button>
+            <button class="btn btn-ghost" type="button" data-font-style="modern" aria-pressed="false" aria-label="Modern font style">Modern</button>
+        </div> -->
 
         <!-- <button class="btn btn-ghost" type="button" data-motion-toggle aria-pressed="true">Motion on</button> -->
         
         <!-- <a href="v2/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">v2 →</a> -->
-        <a href="v3/" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">v3 →</a>
     </nav>
 
     <!-- Mobile: single compact dropdown -->
@@ -72,25 +83,26 @@
             id="prefsTrigger"
             aria-expanded="false"
             aria-controls="prefsDropdown"
-            aria-haspopup="true">
+            aria-haspopup="true"
+            aria-label="Open site preferences">
             Theme ▾
         </button>
         <div class="prefs-dropdown" id="prefsDropdown" role="dialog" aria-label="Site preferences">
             <div class="prefs-section">
                 <span class="prefs-section-title">Color theme</span>
                 <div class="theme-options" role="group" aria-label="Color theme">
-                    <button class="btn btn-ghost" type="button" data-theme="midnight" aria-pressed="true">Midnight</button>
-                    <button class="btn btn-ghost" type="button" data-theme="spring" aria-pressed="false">Spring</button>
-                    <button class="btn btn-ghost" type="button" data-theme="summer" aria-pressed="false">Summer</button>
-                    <button class="btn btn-ghost" type="button" data-theme="fall" aria-pressed="false">Fall</button>
+                    <button class="btn btn-ghost" type="button" data-theme="midnight" aria-pressed="true" aria-label="Midnight theme">Midnight</button>
+                    <button class="btn btn-ghost" type="button" data-theme="spring" aria-pressed="false" aria-label="Spring theme">Spring</button>
+                    <button class="btn btn-ghost" type="button" data-theme="summer" aria-pressed="false" aria-label="Summer theme">Summer</button>
+                    <button class="btn btn-ghost" type="button" data-theme="fall" aria-pressed="false" aria-label="Fall theme">Fall</button>
                 </div>
             </div>
 
             <div class="prefs-section">
                 <span class="prefs-section-title">Mode</span>
                 <div class="mode-row" role="group" aria-label="Display mode">
-                    <button class="btn btn-ghost" type="button" data-mode="dark" aria-pressed="true">Dark</button>
-                    <button class="btn btn-ghost" type="button" data-mode="light" aria-pressed="false">Light</button>
+                    <button class="btn btn-ghost" type="button" data-mode="dark" aria-pressed="false" aria-label="Switch to dark mode">Dark</button>
+                    <button class="btn btn-ghost" type="button" data-mode="light" aria-pressed="true" aria-label="Switch to light mode">Light</button>
                 </div>
             </div>
 
@@ -98,23 +110,33 @@
                 <span class="prefs-section-title">Font size</span>
                 <div class="font-row">
                     <button class="btn btn-ghost" type="button" data-font-decrease aria-label="Decrease font size">A−</button>
+                    <label for="fontSliderMobile" class="visually-hidden">Font size</label>
                     <input type="range" id="fontSliderMobile" min="0.85" max="1.25" step="0.05" value="1" aria-label="Font size">
                     <button class="btn btn-ghost" type="button" data-font-increase aria-label="Increase font size">A+</button>
                 </div>
             </div>
 
             <div class="prefs-section">
+                <span class="prefs-section-title">Font style</span>
+                <div class="font-row" role="group" aria-label="Font style">
+                    <button class="btn btn-ghost" type="button" data-font-style="formal" aria-pressed="true" aria-label="Formal font style">Formal</button>
+                    <button class="btn btn-ghost" type="button" data-font-style="poet" aria-pressed="false" aria-label="Poet font style">Poet</button>
+                    <button class="btn btn-ghost" type="button" data-font-style="modern" aria-pressed="false" aria-label="Modern font style">Modern</button>
+                </div>
+            </div>
+
+            <div class="prefs-section">
                 <span class="prefs-section-title">Motion</span>
                 <div class="motion-row" role="group" aria-label="Animation preference">
-                    <button class="btn btn-ghost" type="button" data-motion="on" aria-pressed="true">On</button>
-                    <button class="btn btn-ghost" type="button" data-motion="off" aria-pressed="false">Off</button>
+                    <button class="btn btn-ghost" type="button" data-motion="on" aria-pressed="true" aria-label="Turn animations on">On</button>
+                    <button class="btn btn-ghost" type="button" data-motion="off" aria-pressed="false" aria-label="Turn animations off">Off</button>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<main>
+<main id="main-content">
     <section class="hero" id="hero">
         <p class="hero-eyebrow">Enterprise Frontend · FinTech · Micro-Frontends</p>
         <h1>Staff / Lead UI Engineer</h1>
@@ -136,12 +158,12 @@
             micro-frontends, design systems, and high-performance trading interfaces — bridging
             product vision with Staff-level engineering execution.
         </p>
-        <ul class="tag-list">
-            <li>Trading systems UI</li>
-            <li>Micro-frontends</li>
-            <li>Design systems</li>
-            <li>Enterprise architecture</li>
+        <ul class="tag-list">            
             <li>AI-assisted workflows</li>
+            <li>Technical Leadership</li>
+            <li>Micro-frontends</li>
+            <li>Enterprise architecture</li>
+            <li>People Management</li>
         </ul>
     </section>
 
@@ -149,24 +171,78 @@
         <h2>Experience</h2>
         <div class="timeline">
             <article class="timeline-item">
-                <div class="timeline-title">Freddie Mac — Lead UI Engineer</div>
-                <div class="timeline-subtitle">2023 – Present · Enterprise mortgage &amp; capital markets UI</div>
-                <p class="timeline-detail">Micro-frontend architecture, design system governance, and high-scale data interfaces.</p>
+                <h3 class="timeline-title">Freddie Mac — Senior Full Stack Developer (Lead UI Engineer)</h3>
+                <div class="timeline-subtitle">Sep 2023 – Apr 2026 · McLean, VA</div>
+                <p class="timeline-detail">Architected foundational UI architecture for mission-critical financial web modules including Deal Summary, Market Valuation, Reserves, Fees & Payments, Credit Enhancements, and Appraisals. Delivered myOptigo® platform for enterprise-wide production launch after 2.6 years of MVP development.</p>
+                <ul class="tag-list">
+                    <li>Angular</li>
+                    <li>TypeScript</li>
+                    <li>Micro-frontends</li>
+                    <li>GitHub Copilot</li>
+                    <li>Cursor</li>
+                    <li>PlainID</li>
+                    <li>Storybook</li>
+                    <li>Team Leadership</li>
+                    <li>Mentorship</li>
+                </ul>
             </article>
             <article class="timeline-item">
-                <div class="timeline-title">CGI / Deutsche Bank — Senior UI Engineer</div>
-                <div class="timeline-subtitle">2019 – 2023 · Global banking &amp; trading platforms</div>
-                <p class="timeline-detail">Trading systems UI, real-time market data visualization, and cross-team frontend standards.</p>
+                <h3 class="timeline-title">CGI / Deutsche Bank — Senior Consultant (Senior Software Engineer)</h3>
+                <div class="timeline-subtitle">June 2020 – May 2023 · Raleigh, NC</div>
+                <p class="timeline-detail">Led frontend engineering for enterprise-scale Securities Lending Trading Desk and Corporate Actions platforms. Architected complex Angular applications with modular design, lazy loading, and advanced routing for high-volume institutional trading.</p>
+                <ul class="tag-list">
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>Microservices</li>
+                    <li>Trading UI</li>
+                    <li>REST APIs</li>
+                    <li>Jenkins</li>
+                    <li>Docker</li>
+                    <li>Tableau</li>
+                    <li>SQL</li>
+                    <li>Sprint Planning</li>
+                </ul>
             </article>
             <article class="timeline-item">
-                <div class="timeline-title">Transcontinental Fund Administration — UI Developer</div>
-                <div class="timeline-subtitle">2018 – 2019 · Fund ops &amp; reporting platforms</div>
-                <p class="timeline-detail">Financial reporting dashboards and workflow-driven enterprise applications.</p>
+                <h3 class="timeline-title">CGI / Connect for Health Colorado — Senior Consultant</h3>
+                <div class="timeline-subtitle">Sep 2019 – June 2020 · Denver, CO</div>
+                <p class="timeline-detail">Developed consumer-facing healthcare marketplace applications supporting Colorado's state health insurance enrollment platform. Built responsive accessible web applications with advanced search, filtering, and dynamic routing.</p>
+                <ul class="tag-list">
+                    <li>Angular</li>
+                    <li>Okta</li>
+                    <li>Kubernetes</li>
+                    <li>Jasmine</li>
+                    <li>Karma</li>
+                    <li>Agile</li>
+                </ul>
             </article>
             <article class="timeline-item">
-                <div class="timeline-title">Cognizant — UI Developer</div>
-                <div class="timeline-subtitle">2011 – 2015 · Enterprise consulting &amp; delivery</div>
-                <p class="timeline-detail">Large-scale web applications across healthcare and financial services clients.</p>
+                <h3 class="timeline-title">Transcontinental Fund Administration — Senior Data Specialist</h3>
+                <div class="timeline-subtitle">Apr 2018 – May 2019 · Chicago, IL</div>
+                <p class="timeline-detail">Led investor reporting platform workflows for hedge fund and venture capital clients. Owned end-to-end investor reporting and client-facing financial operations as Client Relationship Manager.</p>
+                <ul class="tag-list">
+                    <li>Financial Dashboards</li>
+                    <li>K-1 Processing</li>
+                    <li>Bloomberg Terminal</li>
+                    <li>Yardi</li>
+                    <li>Audit Collaboration</li>
+                    <li>Portfolio Analytics</li>
+                </ul>
+            </article>
+            <article class="timeline-item">
+                <h3 class="timeline-title">Cognizant — Software Developer (Full Stack Engineer)</h3>
+                <div class="timeline-subtitle">Oct 2011 – July 2015 · Hyderabad, India</div>
+                <p class="timeline-detail">Developed full-stack modules for Consumer Say web/mobile application and Worldpanel Online data visualization platforms. Built interactive UI features and maintained reusable component frameworks.</p>
+                <ul class="tag-list">
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>AJAX</li>
+                    <li>REST APIs</li>
+                    <li>JSON</li>
+                    <li>SQL</li>
+                    <li>Agile</li>
+                </ul>
             </article>
         </div>
     </section>
@@ -176,26 +252,42 @@
         <p class="section-lead">Product-style experiences built with the same vanilla JS architecture powering this site.</p>
         <div class="feature-grid">
             <article class="feature-card">
-                <h3>Design Systems</h3>
-                <p>Token-driven UI libraries, component governance, and cross-team adoption at enterprise scale.</p>
+                <h3>AI-Augmented Engineering</h3>
+                <p>Generative AI, AI agents, MCP Server, LLM-based workflows, and developer productivity optimization using GitHub Copilot, Claude Code, and LangChain.</p>
                 <span class="badge">Core strength</span>
             </article>
             <article class="feature-card">
+                <h3>Frontend Architecture</h3>
+                <p>Scalable UI systems with React, Angular, TypeScript, micro-frontends, design systems, Storybook, and performance-focused frontend engineering.</p>
+                <span class="badge">Architecture</span>
+            </article>
+            <article class="feature-card">
                 <h3>Trading Interfaces</h3>
-                <p>Real-time market data, workflow-heavy dashboards, and performance-critical frontend surfaces.</p>
+                <p>Real-time market data, workflow-heavy dashboards, and performance-critical frontend surfaces for institutional trading and securities lending platforms.</p>
                 <span class="badge">FinTech</span>
             </article>
             <article class="feature-card">
-                <h3>Micro-Frontends</h3>
-                <p>Modular delivery models, shared platform tooling, and independent team velocity.</p>
-                <span class="badge">Architecture</span>
+                <h3>Engineering Leadership</h3>
+                <p>Cross-functional technical leadership, system ownership, roadmap execution, stakeholder alignment, Agile delivery at scale, and technical mentorship.</p>
+                <span class="badge">Leadership</span>
+            </article>
+            <article class="feature-card">
+                <h3>Design Systems</h3>
+                <p>Token-driven UI libraries, component governance, Storybook standards, and cross-team adoption at enterprise scale.</p>
+                <span class="badge">UI/UX</span>
+            </article>
+            <article class="feature-card">
+                <h3>Cloud & DevOps</h3>
+                <p>AWS, Google Cloud, Azure, Jenkins, Docker, Kubernetes, Git, and CI/CD pipeline automation for consistent deployment.</p>
+                <span class="badge">Infrastructure</span>
             </article>
         </div>
     </section>
 </main>
 
 <footer>
-    <p>Built with HTML, CSS, and vanilla JS · <a href="https://github.com/cdara/cdara.github.io">View source</a></p>
+    <p><span aria-hidden="true">✉️</span><a href="mailto:cwork815@gmail.com" aria-label="Send email to cwork815@gmail.com">cwork815@gmail.com</a></p>
+    <!-- <p class="text-right"> <span aria-hidden="true">🚀</span> <a href="v3/" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="View version 3"> v3 wip(🚧)</a></p> -->
 </footer>
 
 <script src="js/storage.js"></script>

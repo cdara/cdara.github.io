@@ -2,15 +2,23 @@ window.Preferences = (function () {
     const THEMES = ["midnight", "spring", "summer", "fall"];
     const MODES = ["dark", "light"];
     const MOTION = ["on", "off"];
+    const FONT_STYLES = ["formal", "poet", "modern"];
 
     const MIN_FONT = 0.85;
     const MAX_FONT = 1.25;
     const FONT_STEP = 0.05;
 
+    const FONT_FAMILIES = {
+        formal: '"Segoe UI", Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+        poet: 'Lato, "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+        modern: 'Poppins, "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif'
+    };
+
     let theme = "midnight";
     let mode = "dark";
     let motion = "on";
     let fontScale = 1;
+    let fontStyle = "formal";
     let motionOverride = false;
 
     const META_COLORS = {
@@ -27,6 +35,7 @@ window.Preferences = (function () {
         mode = readAttr(root, "data-mode", MODES, "dark");
         motion = readAttr(root, "data-motion", MOTION, "on");
         fontScale = parseFloat(root.getAttribute("data-font-scale")) || 1;
+        fontStyle = readAttr(root, "data-font-style", FONT_STYLES, "formal");
 
         if (Storage.get("motionOverride")) {
             motionOverride = true;
@@ -38,6 +47,7 @@ window.Preferences = (function () {
         applyMode(mode, false);
         applyMotion(motion, false);
         applyFont(fontScale, false);
+        applyFontStyle(fontStyle, false);
         syncUI();
 
         window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", (event) => {
@@ -139,6 +149,20 @@ window.Preferences = (function () {
         setFont(fontScale - FONT_STEP);
     }
 
+    function setFontStyle(next) {
+        if (!FONT_STYLES.includes(next)) return;
+        withTransition(() => applyFontStyle(next, true));
+    }
+
+    function applyFontStyle(next, persist) {
+        fontStyle = next;
+        const root = document.documentElement;
+        root.style.setProperty("--font-family", FONT_FAMILIES[next]);
+        root.setAttribute("data-font-style", next);
+        if (persist) Storage.set("fontStyle", next);
+        syncFontStyleButtons();
+    }
+
     function updateMetaThemeColor() {
         const meta = document.querySelector('meta[name="theme-color"]');
         if (meta && META_COLORS[theme]) {
@@ -151,6 +175,7 @@ window.Preferences = (function () {
         syncModeButtons();
         syncMotionButtons();
         syncFontSliders();
+        syncFontStyleButtons();
         syncDesktopMotionToggle();
     }
 
@@ -189,6 +214,13 @@ window.Preferences = (function () {
         });
     }
 
+    function syncFontStyleButtons() {
+        document.querySelectorAll("button[data-font-style]").forEach((btn) => {
+            const active = btn.getAttribute("data-font-style") === fontStyle;
+            btn.setAttribute("aria-pressed", String(active));
+        });
+    }
+
     return {
         init,
         setTheme,
@@ -198,9 +230,11 @@ window.Preferences = (function () {
         setFont,
         increaseFont,
         decreaseFont,
+        setFontStyle,
         getTheme: () => theme,
         getMode: () => mode,
         getMotion: () => motion,
-        getFont: () => fontScale
+        getFont: () => fontScale,
+        getFontStyle: () => fontStyle
     };
 })();

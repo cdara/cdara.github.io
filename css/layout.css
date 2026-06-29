@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--space-4);
-    padding: 0 var(--space-5);
+    padding: 0 calc(var(--space-5) * 0.9);
     background: var(--surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -87,9 +87,9 @@
     border-radius: 999px;
     background: var(--surface);
     border: 1px solid var(--border);
-    color: var(--accent);
+    color: var(--heading);
     font-size: var(--font-xs);
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-semibold);
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }

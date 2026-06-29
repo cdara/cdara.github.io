@@ -43,6 +43,10 @@
         document.querySelectorAll('input[type="range"][id^="fontSlider"]').forEach((slider) => {
             slider.addEventListener("input", () => Preferences.setFont(slider.value));
         });
+
+        document.querySelectorAll("button[data-font-style]").forEach((btn) => {
+            btn.addEventListener("click", () => Preferences.setFontStyle(btn.getAttribute("data-font-style")));
+        });
     }
 
     function bindMobileDropdown() {

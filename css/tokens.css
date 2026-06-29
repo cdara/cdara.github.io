@@ -53,7 +53,7 @@ html.theme-transition *::after {
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    font-family:
+    font-family: var(--font-family,
         "Segoe UI",
         Inter,
         -apple-system,
@@ -61,7 +61,7 @@ body {
         Roboto,
         Helvetica,
         Arial,
-        sans-serif;
+        sans-serif) !important;
     font-size: calc(var(--font-md) * var(--font-scale));
     line-height: 1.65;
     color: var(--text);
@@ -176,4 +176,19 @@ footer {
     text-align: center;
     font-size: var(--font-sm);
     color: var(--text-muted);
+    position: relative;
+}
+
+.footer-link {
+    position: absolute;
+    bottom: var(--space-5);
+    right: var(--space-5);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: var(--font-sm);
+    transition: color var(--transition-base);
+}
+
+.footer-link:hover {
+    color: var(--accent);
 }

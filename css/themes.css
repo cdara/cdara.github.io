@@ -14,14 +14,15 @@ html[data-theme="midnight"][data-mode="dark"] {
     --border: #2a3544;
     --heading: #f8fafc;
     --text: #e2e8f0;
-    --text-muted: #94a3b8;
+    --text-muted: #cbd5e1;
     --accent: #60a5fa;
     --accent-strong: #93c5fd;
     --accent-contrast: #0b1118;
     --accent-secondary: #818cf8;
     --accent-tertiary: #a78bfa;
     --tag-bg: #1e293b;
-    --tag-text: #cbd5e1;
+    --tag-text: #e2e8f0;
+    --btn-text: #f8fafc;
 }
 
 html[data-theme="midnight"][data-mode="light"] {
@@ -33,14 +34,15 @@ html[data-theme="midnight"][data-mode="light"] {
     --border: #cbd5e1;
     --heading: #0f172a;
     --text: #334155;
-    --text-muted: #475569;
+    --text-muted: #1e293b;
     --accent: #2563eb;
     --accent-strong: #1d4ed8;
     --accent-contrast: #ffffff;
     --accent-secondary: #4f46e5;
     --accent-tertiary: #7c3aed;
     --tag-bg: #eff6ff;
-    --tag-text: #1e40af;
+    --tag-text: #1e3a8a;
+    --btn-text: #0f172a;
 }
 
 /* Spring */
@@ -53,14 +55,15 @@ html[data-theme="spring"][data-mode="dark"] {
     --border: #2d4035;
     --heading: #ecfdf5;
     --text: #d1fae5;
-    --text-muted: #6ee7b7;
+    --text-muted: #a7f3d0;
     --accent: #34d399;
     --accent-strong: #6ee7b7;
     --accent-contrast: #052e16;
     --accent-secondary: #10b981;
     --accent-tertiary: #059669;
     --tag-bg: #14532d;
-    --tag-text: #bbf7d0;
+    --tag-text: #d1fae5;
+    --btn-text: #ecfdf5;
 }
 
 html[data-theme="spring"][data-mode="light"] {
@@ -72,14 +75,15 @@ html[data-theme="spring"][data-mode="light"] {
     --border: #bbf7d0;
     --heading: #14532d;
     --text: #166534;
-    --text-muted: #15803d;
+    --text-muted: #064e3b;
     --accent: #059669;
     --accent-strong: #047857;
     --accent-contrast: #ffffff;
     --accent-secondary: #10b981;
     --accent-tertiary: #047857;
     --tag-bg: #dcfce7;
-    --tag-text: #166534;
+    --tag-text: #065f46;
+    --btn-text: #14532d;
 }
 
 /* Summer Lemon */
@@ -92,14 +96,15 @@ html[data-theme="summer"][data-mode="dark"] {
     --border: #3f3824;
     --heading: #fefce8;
     --text: #fef9c3;
-    --text-muted: #fde047;
+    --text-muted: #fde68a;
     --accent: #facc15;
     --accent-strong: #fde047;
     --accent-contrast: #422006;
     --accent-secondary: #eab308;
     --accent-tertiary: #ca8a04;
     --tag-bg: #422006;
-    --tag-text: #fef08a;
+    --tag-text: #fef9c3;
+    --btn-text: #fefce8;
 }
 
 html[data-theme="summer"][data-mode="light"] {
@@ -110,15 +115,16 @@ html[data-theme="summer"][data-mode="light"] {
     --hero-bg: #fde047;
     --border: #fde68a;
     --heading: #713f12;
-    --text: #854d0e;
-    --text-muted: #a16207;
+    --text: #713f12;
+    --text-muted: #78350f;
     --accent: #ca8a04;
     --accent-strong: #a16207;
     --accent-contrast: #ffffff;
     --accent-secondary: #eab308;
     --accent-tertiary: #a16207;
     --tag-bg: #fef9c3;
-    --tag-text: #854d0e;
+    --tag-text: #713f12;
+    --btn-text: #713f12;
 }
 
 /* Fall Chestnut */
@@ -139,6 +145,7 @@ html[data-theme="fall"][data-mode="dark"] {
     --accent-tertiary: #c2410c;
     --tag-bg: #431407;
     --tag-text: #fed7aa;
+    --btn-text: #fef3e2;
 }
 
 html[data-theme="fall"][data-mode="light"] {
@@ -149,13 +156,14 @@ html[data-theme="fall"][data-mode="light"] {
     --hero-bg: #fdba74;
     --border: #fed7aa;
     --heading: #7c2d12;
-    --text: #9a3412;
-    --text-muted: #c2410c;
+    --text: #7c2d12;
+    --text-muted: #9a3412;
     --accent: #ea580c;
     --accent-strong: #c2410c;
     --accent-contrast: #ffffff;
     --accent-secondary: #f97316;
     --accent-tertiary: #c2410c;
     --tag-bg: #ffedd5;
-    --tag-text: #9a3412;
+    --tag-text: #7c2d12;
+    --btn-text: #7c2d12;
 }
