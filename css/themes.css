@@ -81,7 +81,7 @@ html[data-theme="spring"][data-mode="light"] {
     --accent-contrast: #ffffff;
     --accent-secondary: #10b981;
     --accent-tertiary: #047857;
-    --tag-bg: #dcfce7;
+    --tag-bg: #8df9a3;
     --tag-text: #065f46;
     --btn-text: #14532d;
 }
@@ -122,7 +122,7 @@ html[data-theme="summer"][data-mode="light"] {
     --accent-contrast: #ffffff;
     --accent-secondary: #eab308;
     --accent-tertiary: #a16207;
-    --tag-bg: #fef9c3;
+    --tag-bg: #ffe9a8;
     --tag-text: #713f12;
     --btn-text: #713f12;
 }
@@ -163,7 +163,7 @@ html[data-theme="fall"][data-mode="light"] {
     --accent-contrast: #ffffff;
     --accent-secondary: #f97316;
     --accent-tertiary: #c2410c;
-    --tag-bg: #ffedd5;
+    --tag-bg: #ffd194;
     --tag-text: #7c2d12;
     --btn-text: #7c2d12;
 }
