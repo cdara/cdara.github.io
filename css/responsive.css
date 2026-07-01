@@ -60,6 +60,14 @@
     .card {
         padding: var(--space-5);
     }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-lead {
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 1049px) {
