@@ -275,6 +275,11 @@ input:focus-visible {
     /* filter: brightness(1.15); */
 }
 
+html[data-mode="dark"] .tech-icons a[title="Ollama"] img,
+html[data-mode="dark"] .tech-icons a[title="OpenAI"] img {
+    filter: invert(1);
+}
+
 .chat-preview {
     border: 1px dashed var(--border);
     border-radius: var(--radius-md);
