@@ -119,8 +119,6 @@
 
 .card {
     background: var(--surface);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: var(--space-6);
@@ -254,6 +252,27 @@ input:focus-visible {
     color: var(--tag-text);
     font-size: var(--font-xs);
     font-weight: var(--weight-medium);
+    margin-bottom: var(--space-4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-7);
+    align-items: center;
+}
+
+.tech-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-base), filter var(--transition-base);
+}
+
+.tech-icons a:hover {
+    transform: translateY(-8px);
+    /* filter: brightness(1.15); */
 }
 
 .chat-preview {

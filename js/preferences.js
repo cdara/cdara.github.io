@@ -1,5 +1,5 @@
 window.Preferences = (function () {
-    const THEMES = ["midnight", "spring", "summer", "fall"];
+    const THEMES = ["sapphire", "spring", "summer", "fall"];
     const MODES = ["dark", "light"];
     const MOTION = ["on", "off"];
     const FONT_STYLES = ["formal", "poet", "modern"];
@@ -14,7 +14,7 @@ window.Preferences = (function () {
         modern: 'Poppins, "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif'
     };
 
-    let theme = "midnight";
+    let theme = "sapphire";
     let mode = "dark";
     let motion = "on";
     let fontScale = 1;
@@ -22,7 +22,7 @@ window.Preferences = (function () {
     let motionOverride = false;
 
     const META_COLORS = {
-        midnight: { dark: "#0b1118", light: "#f1f5f9" },
+        sapphire: { dark: "#0b1118", light: "#f1f5f9" },
         spring: { dark: "#0d1510", light: "#f0fdf4" },
         summer: { dark: "#14120a", light: "#fefce8" },
         fall: { dark: "#140f0c", light: "#fff7ed" }
@@ -31,7 +31,7 @@ window.Preferences = (function () {
     function init() {
         const root = document.documentElement;
 
-        theme = readAttr(root, "data-theme", THEMES, "midnight");
+        theme = readAttr(root, "data-theme", THEMES, "sapphire");
         mode = readAttr(root, "data-mode", MODES, "dark");
         motion = readAttr(root, "data-motion", MOTION, "on");
         fontScale = parseFloat(root.getAttribute("data-font-scale")) || 1;
